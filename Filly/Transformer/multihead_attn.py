@@ -97,7 +97,5 @@ heads = 4
 d_model = 512
 
 msa = MultiHeadAttention(heads, d_model)
-x = msa(query=torch.randn(100, 32, d_model),
-        key=torch.randn(100, 32, d_model),
-        value=torch.randn(100, 32, d_model))
+x = msa(query=torch.randn(100, 32, d_model), key=torch.randn(100, 32, d_model), value=torch.randn(100, 32, d_model))
 print(x.shape)  # [100, 32, 512]
